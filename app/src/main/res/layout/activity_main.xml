@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/drawerlayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent" android:layout_height="match_parent">
+
+        <fragment
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/map"
+            android:name="com.google.android.gms.maps.MapFragment"
+            android:layout_above="@+id/shortest_button">
+        </fragment>
+
+        <Spinner
+            android:layout_width="39dp"
+            android:layout_height="39dp"
+            android:layout_marginTop="65dp"
+            android:layout_marginRight="11dp"
+            android:id="@+id/category_spinner"
+            android:background="#67ffffff"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true" >
+        </Spinner>
+
+        <!--현재 위치 혹은 포커스로부터 가장 가까운 장소 표시-->
+        <!-- android:background="@drawable/custom_button_selector" -->
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:id="@+id/shortest_button"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:background="@drawable/custom_button_selector" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/shortest_shopname"
+            android:text="가게 이름"
+            android:textColor="#FF000000"
+            android:textSize="15dp"
+            android:layout_alignTop="@+id/shortest_button"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/shortest_category"
+            android:text="분류"
+            android:textColor="#FF707070"
+            android:textSize="12dp"
+            android:layout_below="@+id/shortest_shopname"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="20dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/shortest_tel"
+            android:text="000-0000-0000"
+            android:textColor="#FF000000"
+            android:textSize="12dp"
+            android:layout_alignBaseline="@+id/shortest_category"
+            android:layout_toEndOf="@+id/shortest_category" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/shortest_address"
+            android:text="00시 00구 00동 00번지"
+            android:textColor="#FF707070"
+            android:textSize="12dp"
+            android:layout_marginLeft="10dp"
+            android:layout_below="@+id/shortest_category"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_gravity="end"
+        android:orientation="horizontal"
+        android:divider="#23222A"
+        android:dividerHeight="1dp"
+        android:background="#70FFFFFF"
+        android:id="@+id/drawer" >
+
+        <EditText
+            android:id="@+id/drawer_search"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:paddingLeft="10dp"
+            android:layout_toLeftOf="@+id/button_search"
+            android:hint="장소명"
+            android:textColorHint="#FF8C8C8C"
+            android:background="#FFFFFF"/>
+
+        <ImageButton
+            android:id="@+id/button_search"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:background= "@drawable/icon_search"/>
+
+    </RelativeLayout>
+</android.support.v4.widget.DrawerLayout>

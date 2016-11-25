@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/chicken_place_image"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/not_available"
+        android:background="@drawable/border"/>
+
+    <ImageView
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:id="@+id/chicken_modify_icon"
+        android:src="@drawable/modify_icon"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_below="@+id/chicken_place_image"
+        android:layout_alignParentRight="true"
+        android:clickable="true"/>
+
+    <TextView
+        android:id="@+id/chicken_info_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/chicken_place_image"
+        android:paddingTop="10dp"
+        android:paddingLeft="20dp"
+        android:text="치킨집 이름"
+        android:textSize="20dp"
+        android:textColor="#000000" />
+
+    <TextView
+        android:id="@+id/chicken_info_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/chicken_info_name"
+        android:paddingTop="5dp"
+        android:paddingLeft="25dp"
+        android:text="치킨집 소개"
+        android:textSize="17dp"
+        android:textColor="#000000" />
+
+    <TextView
+        android:id="@+id/chicken_info_fried"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/chicken_info_text"
+        android:paddingLeft="30dp"
+        android:paddingTop="5dp"
+        android:text="후라이드치킨 : 정보없음"
+        android:textSize="13dp" />
+
+    <TextView
+        android:id="@+id/chicken_info_spicy"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/chicken_info_fried"
+        android:paddingLeft="30dp"
+        android:paddingTop="3dp"
+        android:text="양념치킨 : 정보없음"
+        android:textSize="13dp"/>
+
+    <TextView
+        android:id="@+id/chicken_info_soya"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/chicken_info_spicy"
+        android:paddingLeft="30dp"
+        android:paddingTop="3dp"
+        android:text="간장치킨 : 정보없음"
+        android:textSize="13dp"/>
+
+    <TextView
+        android:id="@+id/chicken_info_cola"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/chicken_info_soya"
+        android:paddingLeft="30dp"
+        android:paddingTop="3dp"
+        android:text="콜라종류 : 정보없음"
+        android:textSize="13dp"/>
+
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/chicken_info_cola"
+        android:id="@+id/relativeLayout">
+        <!-- like and hate -->
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/chicken_like"
+            android:background="@drawable/icon_like"
+            android:layout_toLeftOf="@+id/chicken_like_count"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textSize="20dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:id="@+id/chicken_like_count"
+            android:layout_centerVertical="true"
+            android:layout_toStartOf="@+id/chicken_hate" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/chicken_hate"
+            android:background="@drawable/icon_hate"
+            android:layout_toLeftOf="@+id/chicken_hate_count"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textSize="20dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:id="@+id/chicken_hate_count"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true" />
+    </RelativeLayout>
+
+</RelativeLayout>

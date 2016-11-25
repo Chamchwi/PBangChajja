@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">탐색따리</string>
+
+    <string name="maps_api_key">AIzaSyCXjB4xmsg_rknQdzzvYMT02OrsL-vQGmc</string>
+    <string name="places_api_key">AIzaSyD0U8pRHwjhGVzHUHOaa5nZixFVYp1rDPQ</string>
+    <string name="search_api_key">1f803df629964f13415131f43d04c7cd</string>
+    <string name="naver_search_api_key">BOucirzpmiJzqGx8WQjA</string>
+    <string name="naver_secret_key">nYLLcckYCl</string>
+    <string name="drawer_open">drawer_open</string>
+    <string name="drawer_close">drawer_close</string>
+</resources>

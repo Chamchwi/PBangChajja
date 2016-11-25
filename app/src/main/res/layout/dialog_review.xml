@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:id="@+id/dialog_review">
+
+    <TextView
+        android:id="@+id/dialog_review_title_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="리뷰 제목"
+        android:textColor="#FF000000"
+        android:layout_margin="10dp" />
+
+    <EditText
+        android:id="@+id/dialog_review_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#FF000000"
+        android:textColorHint="#FF707070"
+        android:hint="XX자 이하"
+        android:paddingLeft="10dp"
+        android:layout_below="@id/dialog_review_title_text"/>
+
+    <TextView
+        android:id="@+id/dialog_review_content_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="리뷰 내용"
+        android:textColor="#FF000000"
+        android:layout_margin="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/dialog_review_title" />
+
+    <EditText
+        android:id="@+id/dialog_review_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#FF000000"
+        android:textColorHint="#FF707070"
+        android:hint="XX자 이하"
+        android:paddingLeft="10dp"
+        android:layout_below="@id/dialog_review_content_text" />
+
+</RelativeLayout>

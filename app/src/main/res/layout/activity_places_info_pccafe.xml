@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/pccafe_place_image"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/not_available"
+        android:background="@drawable/border"/>
+
+    <ImageView
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:id="@+id/pccafe_modify_icon"
+        android:src="@drawable/modify_icon"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_below="@+id/pccafe_place_image"
+        android:layout_alignParentRight="true"
+        android:clickable="true"/>
+
+    <TextView
+        android:id="@+id/pccafe_info_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/pccafe_place_image"
+        android:paddingTop="10dp"
+        android:paddingLeft="20dp"
+        android:text="PC방 이름"
+        android:textSize="20dp"
+        android:textColor="#000000" />
+
+    <TextView
+        android:id="@+id/pccafe_info_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/pccafe_info_name"
+        android:paddingTop="5dp"
+        android:paddingLeft="25dp"
+        android:text="PC방 소개"
+        android:textSize="17dp"
+        android:textColor="#000000" />
+
+    <TextView
+        android:id="@+id/pccafe_info_cpu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/pccafe_info_text"
+        android:paddingLeft="30dp"
+        android:paddingTop="5dp"
+        android:text="CPU : 정보없음"
+        android:textSize="13dp" />
+
+    <TextView
+        android:id="@+id/pccafe_info_ram"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/pccafe_info_cpu"
+        android:paddingLeft="30dp"
+        android:paddingTop="3dp"
+        android:text="RAM : 정보없음"
+        android:textSize="13dp"/>
+
+    <TextView
+        android:id="@+id/pccafe_info_gcard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/pccafe_info_ram"
+        android:paddingLeft="30dp"
+        android:paddingTop="3dp"
+        android:text="Graphic card : 정보없음"
+        android:textSize="13dp"/>
+
+    <TextView
+        android:id="@+id/pccafe_info_monitor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/pccafe_info_gcard"
+        android:paddingLeft="30dp"
+        android:paddingTop="3dp"
+        android:text="Monitor : 정보없음"
+        android:textSize="13dp"/>
+
+    <TextView
+        android:id="@+id/pccafe_info_price"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/pccafe_info_monitor"
+        android:paddingLeft="30dp"
+        android:paddingTop="3dp"
+        android:text="Price : 정보없음(한시간 기준)"
+        android:textSize="13dp"/>
+
+    <TextView
+        android:id="@+id/pccafe_info_service"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/pccafe_info_price"
+        android:paddingLeft="30dp"
+        android:paddingTop="3dp"
+        android:text="Service : "
+        android:textSize="13dp"/>
+
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="pccafe_review_list"
+        android:id="@+id/pccafe_review_list"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/relativeLayout"
+        android:layout_above="@+id/pccafe_review_button" />
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/pccafe_info_price"
+        android:id="@+id/relativeLayout">
+        <!-- like and hate -->
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/pccafe_like"
+            android:background="@drawable/icon_like"
+            android:layout_toLeftOf="@+id/pccafe_like_count"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textSize="20dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:id="@+id/pccafe_like_count"
+            android:layout_centerVertical="true"
+            android:layout_toStartOf="@+id/pccafe_hate" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/pccafe_hate"
+            android:background="@drawable/icon_hate"
+            android:layout_toLeftOf="@+id/pccafe_hate_count"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textSize="20dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:id="@+id/pccafe_hate_count"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true" />
+
+        <Spinner
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/pccafe_info_service_list"
+            android:layout_alignTop="@+id/pccafe_like_count"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="89dp" />
+    </RelativeLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="리뷰쓰기"
+        android:id="@+id/pccafe_review_button"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true" />
+
+</RelativeLayout>
