@@ -7,6 +7,7 @@ import android.widget.TextView;
 
 import com.dsm.spiralmoon.pbangchajja.SearchResult;
 import com.dsm.spiralmoon.pbangchajja.Searcher;
+import com.dsm.spiralmoon.pbangchajja.chicken.PlacesInfoActivity_chicken;
 
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
@@ -57,7 +58,7 @@ public class SearchResult_pccafe extends SearchResult {
 
             String address = "";
 
-            directory = "/pcroom/pccafe_load?";
+            directory = "/PCroom/pccafe_load?";
             address = "http://" + serverIP + directory;
 
             address += "id=" + Integer.toString(this.id);
@@ -103,9 +104,9 @@ public class SearchResult_pccafe extends SearchResult {
             String address = "";
 
             if (!super.isDatabaseExist)
-                directory = "/pcroom/pccafe_register?";
+                directory = "/PCroom/pccafe_register?";
             else
-                directory = "/pcroom/pccafe_update?";
+                directory = "/PCroom/pccafe_update?";
 
             address = "http://" + serverIP + directory;
 

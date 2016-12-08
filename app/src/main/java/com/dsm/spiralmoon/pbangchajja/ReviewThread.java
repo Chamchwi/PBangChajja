@@ -31,7 +31,7 @@ public class ReviewThread extends Thread {
 
                     review.addItem
                             (
-                                    jsonObject.get(i).get("userid").toString(),
+                                    jsonObject.get(i).get("userid").toString(), //수정해야할 부분
                                     jsonObject.get(i).get("title").toString(),
                                     jsonObject.get(i).get("content").toString(),
                                     jsonObject.get(i).get("registeredtime").toString()

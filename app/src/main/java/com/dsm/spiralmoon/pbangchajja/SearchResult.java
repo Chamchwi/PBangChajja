@@ -55,8 +55,8 @@ public class SearchResult implements Serializable {
     public String jsonReviewList = null;
     public boolean isDatabaseExist = false;
 
-//    public String serverIP = "smaker.kr";
-    public String serverIP = "esplay.xyz";
+    public String serverIP = "smaker.kr:8080";
+//    public String serverIP = "esplay.xyz";
 //    public String serverPort = "";
     public String directory = "";
     public static String userid = "";
@@ -91,7 +91,7 @@ public class SearchResult implements Serializable {
             String address = "";
 
             if(selectedCategory.equals("PC방")) {
-                directory = "/pcroom/image?";
+                directory = "/PCroom/image?";
                 address = "http://" + serverIP + directory;
             }
             else if (selectedCategory.equals("치킨")) {
@@ -157,7 +157,7 @@ public class SearchResult implements Serializable {
             String address = "";
 
             if(selectedCategory.equals("PC방")) {
-                directory = "/pcroom/pccafe_like?";
+                directory = "/PCroom/pccafe_like?";
                 address = "http://" + serverIP + directory;
             }
             else if (selectedCategory.equals("치킨")) {
@@ -218,7 +218,7 @@ public class SearchResult implements Serializable {
             String address = "";
 
             if(selectedCategory.equals("PC방")) {
-                directory = "/pcroom/pccafe_review?";
+                directory = "/PCroom/pccafe_review?";
                 address = "http://" + serverIP + directory;
             }
             else if (selectedCategory.equals("치킨")) {
