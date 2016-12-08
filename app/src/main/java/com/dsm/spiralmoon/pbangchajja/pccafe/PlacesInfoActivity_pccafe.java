@@ -109,8 +109,7 @@ public class PlacesInfoActivity_pccafe extends AppCompatActivity {
 //        imageLoadThread.run();
         ReviewThread reviewThread = new ReviewThread(searchResult.jsonReviewList, reviewAdpater); //리뷰를 쓰레드로 불러옴
         reviewThread.run();
-        // ATTENTION: This was auto-generated to implement the App Indexing API.
-        // See https://g.co/AppIndexing/AndroidStudio for more information.
+
         client = new GoogleApiClient.Builder(this).addApi(AppIndex.API).build();
     }
     @Override
